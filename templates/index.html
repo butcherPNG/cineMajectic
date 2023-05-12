@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMajestic</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo"><a href=""><img src="{% static 'img/Open Designers_Logo.png' %}" alt=""></a></div>
+
+        <nav class="nav__list">
+            <a href="#promo" class="nav__list-link__item1">Афиша</a>
+            <a href="#map" class="nav__list-link__item2">Кинотеатры</a>
+            <a href="#news" class="nav__list-link__item3">Новости</a>
+            <a href="#soon" class="nav__list-link__item4">Скоро в прокате</a>
+            <a href="about" class="nav__list-link__item5">О нас</a>
+        </nav>
+
+        <div class="button__container">
+            {% if user.is_authenticated %}
+            <h1 class="title_register">Привет,{{ user.username }}</h1>
+            <a href="login_index.html">Выйти</a>
+            {% else %}
+            <a class="button__primary" href="login/">Войти</a>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <div class="slider-container">
+        <div class="slider-images">
+            <img src="{% static 'img/image_10.png' %}" alt="Image 1" class="slider-image active">
+            <img src="{% static 'img/image_11.png' %}" alt="Image 2" class="slider-image">
+            <img src="{% static 'img/image_12.png' %}" alt="Image 3" class="slider-image">
+        </div>
+        <button class="slider-control slider-control-left">&#8249;</button>
+        <button class="slider-control slider-control-right">&#8250;</button>
+    </div>
+
+    <div class="section__promo" id="promo">
+        <div class="promo__box">
+            <div class="titile__promo_box">
+                <h2 class="titile__promo">Фильмы в прокате</h2>
+            </div>
+            <div class="lable"> <img src="{% static 'img/promo.png' %}" alt="lable-promo"> </div>
+
+        </div>
+        <div class="promo__content">
+            <div class="cards__box__one">
+                <div class="card__promo">
+
+                    <div class="img__card">
+                        <a href="film.html"><img src="{% static 'img/film_promo/image1.png' %}" alt="img__card"></a>
+                    </div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Чебурашка</h4>
+                            <p class="decription__film">Боевик, трейлер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">4.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image2.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Бешенство</h4>
+                            <p class="decription__film">Триллер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">4.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image3.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Достать коротышку</h4>
+                            <p class="decription__film">Комедия, криминал</p>
+                            <p class="date__film">2017</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">5.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image4.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Всё о докторе тан</h4>
+                            <p class="decription__film">Мелодрама,драма</p>
+                            <p class="date__film">2022</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">5.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cards__box__two">
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image5.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Песнь славы</h4>
+                            <p class="decription__film">Мелодрама</p>
+                            <p class="date__film">2020</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">4.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image6.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Череп и кости</h4>
+                            <p class="decription__film">Драма, боевик</p>
+                            <p class="date__film">2014</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">4.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image7.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Дом Gucci</h4>
+                            <p class="decription__film">Триллер,криминал</p>
+                            <p class="date__film">2021</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">5.0</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><a href="film.html"><img src="{% static 'img/film_promo/image8.png' %}"
+                                alt="img__card"></a></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">The Handmaid's</h4>
+                            <p class="decription__film">Фантастика, драма</p>
+                            <p class="date__film">2017</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <p class="star__film">4.5</p>
+                            <img src="{% static 'img/star_film.svg' %}" alt="rating__film">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="button__details">
+            <a class="btn_primary" href="#">Всё фильмы в прокате</a>
+        </div>
+    </div>
+    <div class="section__map" id="map">
+        <div class="titile__map_box">
+            <h2 class="titile__promo">Кинотеатры</h2>
+        </div>
+        <div class="content__box">
+            <div class="map__box">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A75e38fc0e9bd305eefb8c96248f71c211eab1593f075afb626ca34c48d89588a&amp;width=620&amp;height=512&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="addres__box">
+
+                <div class="titile_addres">
+                    <h3 class="titile__promo__h3">Поиск</h3>
+                </div>
+
+                <div class="input__box">
+                    <form method="post" class="my-form">
+                        <div class="form-field">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <div class="addres__variant">
+                    <div class="addres__title__box">
+                        <h3 class="titile__promo__h3">Популярные Кинотератры</h3>
+                    </div>
+                    <div class="addres__element__box">
+                        <div class="addres__element__column__one">
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmSu7lD" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">Площадь Южная</p>
+                                    <p class="variant__time">10:00-20:00</p>
+                                </div>
+                            </a>
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmSu7lD" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">ул. Ленина, 36</p>
+                                    <p class="variant__time">09:00-00:00</p>
+                                </div>
+                            </a>
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmSu7lD" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">ул. Герцена, 34</p>
+                                    <p class="variant__time">10:00-23:00</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="addres__element__column__two">
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmSu7lD" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">ул. Красноармейская, 16</p>
+                                    <p class="variant__time">11:00-22:00</p>
+                                </div>
+                            </a>
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmKFEpC" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">ул. Коммунистическая, 45</p>
+                                    <p class="variant__time">12:00-01:00</p>
+                                </div>
+                            </a>
+                            <a class="addres__element" href="https://yandex.ru/maps/-/CCUkmKEDoA" target="_blank">
+                                <img src="{% static 'img/map-pin.svg'%}" alt="icon_location">
+                                <div class="info__element">
+                                    <p class="variant__title">пр-т Победы, 88</p>
+                                    <p class="variant__time">08:00-21:00</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="section__news" id="news">
+        <div class="title__news__box">
+            <h2 class="titile__promo">Новости</h2>
+        </div>
+
+        <div class="news__box">
+            <div class="item__news">
+                <div class="img__news__box">
+                    <img src="{% static 'img/news_promo/news1.png'%}" alt="news1">
+                </div>
+                <p class="description__news">Дракула-абьюзер, цветок-людоед и психозы Хоакина Феникса: 7 безбашенных
+                    комедийных ужасов</p>
+                <p class="date__news">17.03.23</p>
+            </div>
+            <div class="item__news">
+                <div class="img__news__box">
+                    <img src="{% static 'img/news_promo/news2.png'%}" alt="news1">
+                </div>
+                <p class="description__news">Отправившаяся на отдых в лес семья переживает кошмар в трейлере хоррора
+                    «Иллюзия побега»</p>
+                <p class="date__news">19.03.23</p>
+            </div>
+            <div class="item__news">
+                <div class="img__news__box">
+                    <img src="{% static 'img/news_promo/news3.png'%}" alt="news1">
+                </div>
+                <p class="description__news">Джефф Бриджес согласился бы сняться в сиквеле «Большого Лебовски»</p>
+                <p class="date__news">16.03.23</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="section__soon" id="soon">
+
+        <div class="promo__box">
+            <div class="titile__promo_box">
+                <h2 class="titile__promo">Скоро в прокате</h2>
+            </div>
+
+
+        </div>
+        <div class="promo__content">
+            <div class="cards__box__one">
+                <div class="card__promo">
+
+                    <div class="img__card"><img src="{% static 'img/film_promo/image9.png' %}" alt="img__card"></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Чебурашка</h4>
+                            <p class="decription__film">Боевик, трейлер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <img src="{% static 'img/rating_film.png' %}" alt="rating__film">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><img src="{% static 'img/film_promo/image10.png' %}" alt="img__card"></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Чебурашка</h4>
+                            <p class="decription__film">Боевик, трейлер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <img src="{% static 'img/rating_film.png' %}" alt="rating__film">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><img src="{% static 'img/film_promo/image11.png' %}" alt="img__card"></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Чебурашка</h4>
+                            <p class="decription__film">Боевик, трейлер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <img src="{% static 'img/rating_film.png' %}" alt="rating__film">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card__promo">
+
+                    <div class="img__card"><img src="{% static 'img/film_promo/image12.png' %}" alt="img__card"></div>
+
+                    <div class="card__box__content">
+
+                        <div class="card__content">
+                            <h4 class="titile__film">Чебурашка</h4>
+                            <p class="decription__film">Боевик, трейлер</p>
+                            <p class="date__film">2023</p>
+                        </div>
+
+                        <div class="film__rating">
+                            <img src="{% static 'img/rating_film.png' %}" alt="rating__film">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="button__details">
+            <a class="btn_primary" href="#">Всё фильмы в прокате</a>
+        </div>
+
+    </div>
+    <footer class="section__footer">
+        <div class="footer__section">
+            <div class="footer__box">
+                <div class="description__footer">
+                    <h4 class="footer__title">CineMajestic</h4>
+                    <p class="footer__description">Исследуйте мир кинематографа вместе с CineMajestic - лучшим
+                        кинотеатром с широким выбором фильмов для всех вкусов
+                        и возрастов.</p>
+                </div>
+                <div class="footer__soctial">
+                    <a href="https://discord.com/" target="_blank"> <img
+                            src="{% static 'img/icon_footer/discord_icon.svg'%} " alt="#"></a>
+                    <a href="https://www.youtube.com/channel/UCFNS9Ajnby6Nr7WSz-qDa5g" target="_blank"> <img
+                            src="{% static 'img/icon_footer/youtube.svg'%}" alt="#"></a>
+                    <a href="https://vk.com/" target="_blank"> <img src="{% static 'img/icon_footer/vk.svg'%}"
+                            alt="#"></a>
+                    <a href="https://web.telegram.org/" target="_blank"> <img
+                            src="{% static 'img/icon_footer/telegram.svg'%}" alt="#"></a>
+                </div>
+            </div>
+            <div class="sections__footer">
+
+                <div class="section__description__footer">
+                    <h4 class="footer__title">Разделы</h4>
+                    <div class="link__box">
+                        <a class="footer__descriptions" href="#promo">Афиша</a>
+                        <a class="footer__descriptions" href="#map">Кинотеатры</a>
+                        <a class="footer__descriptions" href="#soon">Скоро в прокате</p>
+                            <a class="footer__descriptions" href="#news">Новости</a>
+                            <a class="footer__descriptions" href="#promo">О нас</a>
+                    </div>
+
+                </div>
+
+                <div class="section__description__footer">
+                    <h4 class="footer__title">Подробнее</h4>
+                    <p class="footer__descriptions">Безопасность</p>
+                    <p class="footer__descriptions">Документация</p>
+                    <p class="footer__descriptions">Сообщество</p>
+                </div>
+
+                <div class="section__description__footer">
+                    <h4 class="footer__title">Поддержка</h4>
+                    <p class="footer__descriptions">Центр помощи</p>
+                    <p class="footer__descriptions">Обновление продукта</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </footer>
+
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+
+</html>

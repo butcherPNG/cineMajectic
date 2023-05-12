@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMajestic</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+</head>
+
+<body>
+  <div class="head">
+    <div class="logo"><a href=""><img src="{% static 'img/Open Designers_Logo.png' %}" alt=""></a></div>
+
+    <nav class="nav__list">
+      <a href="{% url 'index' %}" class="nav__list-link__item1">Афиша</a>
+      <a href="{% url 'index' %}" class="nav__list-link__item2">Кинотеатры</a>
+      <a href="{% url 'index' %}" class="nav__list-link__item3">Новости</a>
+      <a href="{% url 'index' %}" class="nav__list-link__item4">Скоро в прокате</a>
+      <a href="{% url 'index' %}" class="nav__list-link__item5">О нас</a>
+    </nav>
+
+    <div class="button__container">
+      <a class="button__primary" href="login/">Войти</a>
+    </div>
+
+  </div>
+  <div class="hero__section__about">
+    <div class="description__about__box">
+      <h1 class="title__about">CineMajestic - ваш путь к миру кино!</h1>
+      <p class="meta__text__about">Это уникальный проект, который открывает перед вами двери в увлекательный мир
+        кинематографа.</p>
+      <a class="btn_primary_about" href="{% url 'index' %}">Афиша</a>
+    </div>
+    <div class="img__about">
+      <img src="{% static 'img/about__img/hero.png'%}" alt="img__hero">
+    </div>
+  </div>
+
+  <div class="info__cinema_box">
+    <div class="item__box">
+      <div class="box__img_about">
+        <img src="{% static 'img/about__img/block1.png' %}" alt="img__block1">
+      </div>
+      <div class="decscription__about">
+        <h4 class="about__titile">Лучшие фильмы в HD-качестве только у нас!</h4>
+        <p class="about__description">
+          У нас вы найдете самые яркие и запоминающиеся фильмы всех жанров и направлений, а также сможете наслаждаться
+          просмотром
+          в HD-качестве.
+          Наша команда постоянно работает над тем, чтобы обеспечить вас наилучшими условиями просмотра.
+        </p>
+      </div>
+    </div>
+    <div class="item__box">
+      <div class="decscription__about">
+        <h4 class="about__titile">Настоящее кинопутешествие ждет вас!</h4>
+        <p class="about__description">
+          Мы гордимся тем, что можем предоставить вам настоящее кинематографическое путешествие, насыщенное яркими
+          впечатлениями и
+          незабываемыми моментами.
+        </p>
+      </div>
+      <div class="box__img_about">
+        <img src="{% static 'img/about__img/block2.png' %}" alt="img__block1">
+      </div>
+    </div>
+    <div class="item__box">
+      <div class="box__img_about">
+        <img src="{% static 'img/about__img/block3.png' %}" alt="img__block1">
+      </div>
+      <div class="decscription__about">
+        <h4 class="about__titile">Выбирайте лучшие фильмы у нас!</h4>
+        <p class="about__description">
+          У нас вы найдете огромный выбор фильмов на любой вкус, начиная от классических шедевров до новинок
+          киноиндустрии. Наша
+          команда профессионалов постоянно следит за обновлениями и предлагает вам только лучшие фильмы.
+        </p>
+      </div>
+    </div>
+
+    <div class="box_end">
+      <img src="{% static 'img/about__img/block4.png' %}" alt="">
+    </div>
+
+  </div>
+  <footer class="section__footer">
+    <div class="footer__section">
+      <div class="footer__box">
+        <div class="description__footer">
+          <h4 class="footer__title">CineMajestic</h4>
+          <p class="footer__description">Исследуйте мир кинематографа вместе с CineMajestic - лучшим
+            кинотеатром с широким выбором фильмов для всех вкусов
+            и возрастов.</p>
+        </div>
+        <div class="footer__soctial">
+          <a href="https://discord.com/" target="_blank"> <img src="{% static 'img/icon_footer/discord_icon.svg'%} "
+              alt="#"></a>
+          <a href="https://www.youtube.com/channel/UCFNS9Ajnby6Nr7WSz-qDa5g" target="_blank"> <img
+              src="{% static 'img/icon_footer/youtube.svg'%}" alt="#"></a>
+          <a href="https://vk.com/" target="_blank"> <img src="{% static 'img/icon_footer/vk.svg'%}" alt="#"></a>
+          <a href="https://web.telegram.org/" target="_blank"> <img src="{% static 'img/icon_footer/telegram.svg'%}"
+              alt="#"></a>
+        </div>
+      </div>
+      <div class="sections__footer">
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Разделы</h4>
+          <div class="link__box">
+            <a class="footer__descriptions" href="#promo">Афиша</a>
+            <a class="footer__descriptions" href="#map">Кинотеатры</a>
+            <a class="footer__descriptions" href="#soon">Скоро в прокате</p>
+              <a class="footer__descriptions" href="#news">Новости</a>
+              <a class="footer__descriptions" href="#promo">О нас</a>
+          </div>
+
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Explore</h4>
+          <p class="footer__descriptions">Go pro</p>
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Explore</h4>
+          <p class="footer__descriptions">Go pro</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+
+</html>

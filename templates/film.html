@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+
+</head>
+
+<body>
+  <div class="head">
+    <div class="logo"><a href=""><img src="{% static 'img/Open Designers_Logo.png' %}" alt=""></a></div>
+
+    <nav class="nav__list">
+      <a href="#promo" class="nav__list-link__item1">Афиша</a>
+      <a href="#map" class="nav__list-link__item2">Кинотеатры</a>
+      <a href="#news" class="nav__list-link__item3">Новости</a>
+      <a href="#soon" class="nav__list-link__item4">Скоро в прокате</a>
+      <a href="about" class="nav__list-link__item5">О нас</a>
+    </nav>
+
+    <div class="button__container">
+      <a class="button__primary" href="login/">Войти</a>
+    </div>
+
+  </div>
+
+  <div class="section__about__film">
+    <div class="about__film">
+      <div class="film__img__box">
+        <div class="film__img__preview"><img src="{% static 'img/film_page.png' %}" alt="film_page"></div>
+        <div class="film__img__additionaly">
+          <img src="{% static 'img/img_additional(1).png' %}" alt="">
+          <img src="{% static 'img/img_additional(2).png' %}" alt="">
+          <img src="{% static 'img/img_additional(3).png' %}" alt="">
+        </div>
+      </div>
+      <div class="description__film__box">
+        <div class="title__film__box">
+          <h2 class="title__film">Чебурашка</h2>
+          <p class="film__time">2ч.30мин.</p>
+        </div>
+
+        <p class="description__film">"Лабиринт Времени" - захватывающий фантастический боевик о группе ученых,
+          отправившихся в путешествие сквозь временные
+          порталы в поисках ответов на вопросы, которые терзают человечество уже на протяжении веков.
+          "Лабиринт Времени" - это история о любви, дружбе, предательстве и принятии риска, чтобы спасти тех, кто рядом
+          с нами.
+          Это захватывающий фильм, который оставит зрителей в полном восторге и заставит задуматься о том, насколько
+          сильно наши
+          действия могут влиять на будущее.
+        </p>
+
+        <p class="description__meta"><span class="meta__style">Жанр: </span>Научная фантастика, приключение, боевик</p>
+        <p class="description__meta"><span class="meta__style">Режиссёр: </span>Кристофер Нолан
+        </p>
+        <p class="description__meta"><span class="meta__style">Дата: </span>23.04.23</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section__schedule">
+    <div class="titile__promo_box">
+      <h2 class="titile__promo">Фильмы в прокате</h2>
+    </div>
+    <div class="seat__box">
+      <div class="seat__item">
+        <div class="location__seat__box">
+          <div class="seat__meta">
+            <div class="box__info_seat">
+              <div class="map__icon__seat">
+                <img src="{% static 'img/map-pin.svg'%}" alt="map-pin">
+              </div>
+              <div class="descripion__seat">
+                <p class="location__point">Площадь Южная</p>
+                <p class="time__location">10:00-20:00</p>
+              </div>
+            </div>
+
+            <div class="seat__screen">
+              <p class="seat__info">3D</p>
+              <p class="seat__info">2D</p>
+            </div>
+
+            <div class="seat__room">
+              <p class="seat__room__info">зал</p>
+              <p class="seat__room__info">№6</p>
+            </div>
+          </div>
+
+          <div class="ticket__box">
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">11:00</span>
+              </div>
+              <p class="ticket__price">200p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">13:30</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">14:30</span>
+              </div>
+
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">15:30</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">16:30</span>
+              </div>
+              <p class="ticket__price">200p</p>
+            </div>
+
+          </div>
+
+          <button class="btn_primary_two" onclick="showAlert()">Забронировать</button>
+
+
+
+        </div>
+      </div>
+      <div class="seat__item">
+        <div class="location__seat__box">
+          <div class="seat__meta">
+            <div class="box__info_seat">
+              <div class="map__icon__seat">
+                <img src="{% static 'img/map-pin.svg'%}" alt="map-pin">
+              </div>
+              <div class="descripion__seat">
+                <p class="location__point">ул. Ленина, 36</p>
+                <p class="time__location">09:00-00:00</p>
+              </div>
+            </div>
+
+            <div class="seat__screen">
+              <p class="seat__info">3D</p>
+              <p class="seat__info">2D</p>
+            </div>
+
+            <div class="seat__room">
+              <p class="seat__room__info">зал</p>
+              <p class="seat__room__info">№9</p>
+            </div>
+          </div>
+
+          <div class="ticket__box">
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">9:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">10:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">12:00</span>
+              </div>
+
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">14:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">18:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+          </div>
+
+          <button class="btn_primary_two" onclick="showAlert()">Забронировать</button>
+
+
+
+        </div>
+      </div>
+      <div class="seat__item">
+        <div class="location__seat__box">
+          <div class="seat__meta">
+            <div class="box__info_seat">
+              <div class="map__icon__seat">
+                <img src="{% static 'img/map-pin.svg'%}" alt="map-pin">
+              </div>
+              <div class="descripion__seat">
+                <p class="location__point">ул. Герцена</p>
+                <p class="time__location">10:00-23:00</p>
+              </div>
+            </div>
+
+            <div class="seat__screen">
+              <p class="seat__info">3D</p>
+              <p class="seat__info">2D</p>
+            </div>
+
+            <div class="seat__room">
+              <p class="seat__room__info">зал</p>
+              <p class="seat__room__info">№2</p>
+            </div>
+          </div>
+
+          <div class="ticket__box">
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">17:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">18:00</span>
+              </div>
+              <p class="ticket__price">210p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">19:00</span>
+              </div>
+
+              <p class="ticket__price">250p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">20:00</span>
+              </div>
+              <p class="ticket__price">290p</p>
+            </div>
+
+            <div class="seat__ticket">
+              <div class="time__ticket__box">
+                <span class="time_ticket">22:00</span>
+              </div>
+              <p class="ticket__price">300p</p>
+            </div>
+
+          </div>
+
+          <button class="btn_primary_two" onclick="showAlert()">Забронировать</button>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <footer class="section__footer">
+    <div class="footer__section">
+      <div class="footer__box">
+        <div class="description__footer">
+          <h4 class="footer__title">CineMajestic</h4>
+          <p class="footer__description">Исследуйте мир кинематографа вместе с CineMajestic - лучшим
+            кинотеатром с широким выбором фильмов для всех вкусов
+            и возрастов.</p>
+        </div>
+        <div class="footer__soctial">
+          <a href="https://discord.com/" target="_blank"> <img src="{% static 'img/icon_footer/discord_icon.svg'%} "
+              alt="#"></a>
+          <a href="https://www.youtube.com/channel/UCFNS9Ajnby6Nr7WSz-qDa5g" target="_blank"> <img
+              src="{% static 'img/icon_footer/youtube.svg'%}" alt="#"></a>
+          <a href="https://vk.com/" target="_blank"> <img src="{% static 'img/icon_footer/vk.svg'%}" alt="#"></a>
+          <a href="https://web.telegram.org/" target="_blank"> <img src="{% static 'img/icon_footer/telegram.svg'%}"
+              alt="#"></a>
+        </div>
+      </div>
+      <div class="sections__footer">
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Разделы</h4>
+          <div class="link__box">
+            <a class="footer__descriptions" href="#promo">Афиша</a>
+            <a class="footer__descriptions" href="#map">Кинотеатры</a>
+            <a class="footer__descriptions" href="#soon">Скоро в прокате</p>
+              <a class="footer__descriptions" href="#news">Новости</a>
+              <a class="footer__descriptions" href="#promo">О нас</a>
+          </div>
+
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Подробнее</h4>
+          <p class="footer__descriptions">Безопасность</p>
+          <p class="footer__descriptions">Документация</p>
+          <p class="footer__descriptions">Сообщество</p>
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Поддержка</h4>
+          <p class="footer__descriptions">Центр помощи</p>
+          <p class="footer__descriptions">Обновление продукта</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script_by.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+
+</html>

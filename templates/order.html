@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+</head>
+
+<body>
+  <div class="head">
+    <div class="logo"><a href=""><img src="{% static 'img/Open Designers_Logo.png' %}" alt=""></a></div>
+
+    <nav class="nav__list">
+      <a href="#promo" class="nav__list-link__item1">Афиша</a>
+      <a href="#map" class="nav__list-link__item2">Кинотеатры</a>
+      <a href="#news" class="nav__list-link__item3">Новости</a>
+      <a href="#soon" class="nav__list-link__item4">Скоро в прокате</a>
+    </nav>
+
+    <div class="button__container">
+      <button class="button__primary">Войти</button>
+      <button class="button__secondary">Выход</button>
+    </div>
+
+  </div>
+  <div class="section__order">
+    <div class="order__box">
+      <div class="order__back">
+        <a href="#"><img src="{% static 'img/chevron-left.svg' %}" alt="">назад</a>
+      </div>
+
+      <div class="row__film">
+        <div class="film__order">
+          <img src="{% static 'img/image8.png' %}" alt="">
+          <div class="description__order">
+            <p class="description__film__title">Чебурашка</p>
+            <p class="description__film__meta">11 май, Зал №6, 15:00</p>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <footer class="section__footer">
+    <div class="footer__section">
+      <div class="footer__box">
+        <div class="description__footer">
+          <h4 class="footer__title">Open Designers</h4>
+          <p class="footer__description">Open source is source code that is made freely available for possible
+            modification and redistribution. Products include
+            permission to use the source code, design documents, or content of the product.</p>
+        </div>
+        <div class="footer__soctial">
+          <a href="https://discord.com/"> <img src="{% static 'img/discord_icon.svg'%}" alt="#"></a>
+        </div>
+      </div>
+      <div class="sections__footer">
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Explore</h4>
+          <p class="footer__descriptions">Go pro</p>
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Explore</h4>
+          <p class="footer__descriptions">Go pro</p>
+        </div>
+
+        <div class="section__description__footer">
+          <h4 class="footer__title">Explore</h4>
+          <p class="footer__descriptions">Go pro</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+
+
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+
+</html>
